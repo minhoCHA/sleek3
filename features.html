@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Slack</title>
+    <style>
+        @font-face {
+            font-family: Slack-Larsseit;
+            src: url(assets/fonts/larsseit-bold.woff2) format('woff2');
+        }
+
+        @font-face {
+            font-family: Slack-Circular-Pro;
+            src: url(assets/fonts/circular-pro-bold.woff2) format('woff2');
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: Slack-Circular-Pro;
+            src: url(assets/fonts/circular-pro-book.woff2) format('woff2');
+            font-weight: 400;
+        }
+
+
+
+        .header-headline {
+            font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+            font-size: 3.125rem;
+            font-weight: 700;
+            line-height: 1.12;
+            letter-spacing: -.8px;
+        }
+
+        .secondary-headline {
+            font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+            font-size: .875rem;
+            font-weight: 700;
+            line-height: 1.125;
+            letter-spacing: .8px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.333;
+            letter-spacing: -.2px;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .btn-slack {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: 0 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+            font-weight: 700;
+            line-height: 1.28571429;
+            letter-spacing: .8px;
+            font-size: .875rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 19px 40px 20px;
+            display: block;
+            width: 100%;
+            transition: box-shadow 420ms cubic-bezier(.165, .84, .44, 1), color 420ms cubic-bezier(.165, .84, .44, 1), background 420ms cubic-bezier(.165, .84, .44, 1);
+        }
+
+        .btn-primary {
+            background-color: #611f69;
+            color: #fff;
+            fill: #fff;
+            display: inline-block;
+            white-space: nowrap;
+            flex-basis: auto;
+            width: auto;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #611f69;
+            fill: #611f69;
+            box-shadow: inset 0 0 0 1px #611f69;
+            display: inline-block;
+            white-space: nowrap;
+            flex-basis: auto;
+            width: auto;
+        }
+        
+        .btn-bottom-primary {
+            background-color: #fff;
+            color: #611f69;
+            fill: #611f69;
+            display: inline-block;
+            white-space: nowrap;
+            flex-basis: auto;
+            width: auto;
+        }
+
+        .btn-bottom-secondary {
+            background-color: transparent;
+            color: #fff;
+            fill: #fff;
+            box-shadow: inset 0 0 0 1px #fff;
+            display: inline-block;
+            white-space: nowrap;
+            flex-basis: auto;
+            width: auto;
+        }
+
+        .btn-primary:hover {
+            background-color: #4a154b;
+            color: #fff;
+            fill: #fff;
+            outline: 0;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: transparent;
+            color: #4a154b;
+            fill: #4a154b;
+            border-color: #4a154b;
+            box-shadow: inset 0 0 0 2px #611f69;
+            text-decoration: none;
+        }
+
+        .section-header-text-box {
+            padding: 50px 15px;
+            text-align: center;
+        }
+
+        .section-footer-text-box {
+            background-image: url("https://a.slack-edge.com/80588/spacesuit/source/images/backgrounds/bg-halftone-black-20p.png");
+            background-size: 1300px 700px;
+            height: 370px;
+            background-color: #4a154b;
+            color: #fff;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* .bottom-headline {
+            font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+            font-weight: 700;
+            line-height: 1.1875;
+            letter-spacing: -.3px;
+            font-size: 1.5rem;
+        } */
+
+        /* .quote-content {
+            width: 350px;
+            text-align: center;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="section-header-text-box">
+            <h2 class="secondary-headline">SLACK VS. EMAIL</h2>
+            <h1 class="header-headline">An easier, more organized way to work</h1>
+            <p>You could get buried in email. Or you could get real work done in Slack.</p>
+            <a class="btn-slack btn-primary" href="#">Try Slack</a>
+            <a class="btn-slack btn-secondary" href="#">Contact Sales</a>
+        </div>
+    </section>
+
+    <section class="container-fluid">
+        <div class="container">
+            <div class="video-content-wrapper">
+
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="feature-content-wrapper">
+                <div class="row">
+                    <div class="grid feature-text-content">
+
+                    </div>
+                    <div class="grid feature-visual-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="quote-content">
+            <div><a></a></div>
+            <p>"You can't have a good conversation over email-it's not quick enough. Coming together in Slack channels allows us to easily discuss day-to-day</p>
+            <div>
+                <p>Benjamin Sternsmith</p>
+                <p>Area Vice President of Sales, Lyft Business</p>
+                <a>Read Story</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container-fluid">
+        <div class="section-footer-text-box">
+            <h3 class="bottom-headline">Meet the alternative to email</h3>
+            <a class="btn-slack btn-bottom-primary" href="#">Try Slack</a>
+            <a class="btn-slack btn-bottom-secondary" href="#">Contact Sales</a>
+        </div>
+    </section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
