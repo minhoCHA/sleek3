@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -57,6 +61,13 @@
             letter-spacing: -.2px;
             margin-top: 0;
             margin-bottom: 1rem;
+        }
+
+        a {
+          color: #1264a3;
+          cursor: pointer;
+          text-decoration: none;
+          word-break: break-word;
         }
 
         .btn-slack {
@@ -143,6 +154,7 @@
         .section-header-text-box {
             padding: 50px 15px;
             text-align: center;
+            margin-bottom: 10%;
         }
 
         .section-footer-text-box {
@@ -151,28 +163,685 @@
             height: 370px;
             background-color: #4a154b;
             color: #fff;
+            padding: 0 auto;
+            padding-top: 10%;
             margin: 0 auto;
-            text-align: center;
+            margin-top: 10%;
         }
 
-        /* .bottom-headline {
+        .bottom-headline {
             font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
             font-weight: 700;
             line-height: 1.1875;
             letter-spacing: -.3px;
             font-size: 1.5rem;
+        }
+
+        @media screen and (min-width: 25rem) {
+          .bottom-headline {
+              font-size: calc(1.5rem + (8 * (100vw - 400px)/ 624));
+          }
+        }
+
+        @media screen and (max-width: 1023px) and (min-width: 0) {
+          .btn-slack {
+            margin-top: 0;
+            width: 100%;
+            margin-top: 1rem;
+          }
+
+          .btn-slack.bottom {
+            width: 50%;
+          }
+        }
+
+        .quote-content {
+          max-width: 650px;
+        }
+
+        .quote-content.lyft {
+          margin-top: 5.6rem;
+          margin-bottom: 2rem;
+        }
+
+        @media screen and (min-width: 48rem) {
+          .quote-content.lyft {
+            margin-top: 12.6rem;
+          }
+        }
+
+        @media screen and (min-width: 48rem) {
+          .quote-content.colehaan {
+            padding-top: 8rem;
+            margin-top: 0;
+            margin-bottom: 8rem;
+          }
+        }
+
+        .quote-image {
+          margin-bottom: 1.5rem;
+        }
+        .quote-name {
+          font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          font-weight: 700;
+          line-height: 1.44444444;
+          letter-spacing: normal;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .quote-job {
+          font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          line-height: 1.44444444;
+          letter-spacing: normal;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .quote-text {
+          font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          font-weight: 300;
+          line-height: 1.35714286;
+          letter-spacing: -.3px;
+          font-size: 1.25rem;
+          margin-bottom: 1rem;
+          font-style: italic;
+        }
+
+        .image-headline {
+          font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          font-weight: 700;
+          line-height: 1.1875;
+          letter-spacing: -.3px;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          margin-top: 0;
+        }
+
+        .image-text {
+          font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          font-weight: 400;
+          line-height: 1.44444444;
+          letter-spacing: normal;
+          font-size: 1.125rem;
+          margin-bottom: 1rem;
+        }
+
+        .link-label {
+          font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          line-height: 1.44444444;
+          letter-spacing: normal;
+          font-size: 1.125rem;
+          display: inline-block;
+          margin-bottom: 0;
+          font-weight: 400;
+          color: #1264a3;
+          cursor: pointer;
+          text-decoration: none;
+          word-break: break-word;
+          margin-bottom: .6rem;
+          margin-bottom: 0;
+        position: relative;
+        }
+
+        .link-label:hover {
+          text-decoration: none;
+        }
+
+        .link-label:after {
+          background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%206a.5.5%200%200%200%200%201V6zM12.854.646a.5.5%200%200%200-.708.708l.708-.708zM18%206.5l.354.354a.5.5%200%200%200%200-.708L18%206.5zm-5.854%205.146a.5.5%200%200%200%20.708.708l-.708-.708zM1%207h16.5V6H1v1zm16.646-.854l-5.5%205.5.708.708%205.5-5.5-.708-.708zm-5.5-4.792l2.75%202.75.708-.708-2.75-2.75-.708.708zm2.75%202.75l2.75%202.75.708-.708-2.75-2.75-.708.708z%22%20fill%3D%22%231264A3%22%2F%3E%3C%2Fsvg%3E);
+          content: '';
+          width: 19px;
+          height: 13px;
+          display: inline-block;
+          margin-left: .5em;
+        }
+
+        .link-label.extra:before {
+          text-decoration: none;
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #1264a3;
+          /* visibility: hidden; */
+          transition: all 0.3s ease-in-out;
+        }
+
+        .link-label.extra:hover:before {
+          visibility: visible;
+          width: 100%;
+        }
+
+        .extra-video {
+          width: 100%;
+        }
+
+        .image-content {
+          margin: 0 auto;
+        }
+        /* .feature-text-content {
+          grid-template-columns: 40.24390244% 48.7804878%;
+    grid-column-gap: 10.97560976%;
         } */
 
-        /* .quote-content {
-            width: 350px;
-            text-align: center;
-        } */
+
+        #zoe_video_div {
+          position: absolute;
+          text-align: center;
+        }
+        #zoe_video {
+          width: 70%;
+          margin-top: -7%;
+          margin-left: -35%;
+        }
+
+        .feature-text-content.with-image {
+          width: 70%;
+          margin: 15% auto;
+        }
+
+        .first-content {
+          background-color: #e5c7c1;
+          padding: 0rem 0;
+        }
+
+        .second-content {
+          background-color: #d4e6d5;
+          margin-bottom: 10rem;
+          padding: 5rem 0;
+        }
+
+        .youtube-video {
+          box-shadow: 0 0 1.5rem rgba(105,105,105,.5);
+          max-width: 870px;
+          width: 100%;
+        }
+
+        @media screen and (min-width: 48rem) {
+          .youtube-video {
+            margin-bottom: -12rem!important;
+          }
+        }
+
+        @media screen and (min-width: 64rem) {
+          .youtube-video {
+            margin-bottom: 7.7rem!important;
+            margin-top: -10%;
+          }
+        }
+
+        .video-content-wrapper {
+          margin-left: 10%;
+          padding-top: 0;
+          justify-content: center;
+        }
+
+
+        .zoe-content {
+          margin-bottom: 3rem;
+        }
+
+        @media screen and (min-width: 48rem) {
+          .zoe-content {
+              padding: 5rem 0;
+              margin-bottom: 0;
+          }
+        }
+
+        .background-video {
+          z-index: -1;
+          /* position: absolute; */
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          /* height: 100%; */
+          margin: auto;
+          max-width: 100%;
+          /* object-fit: cover; */
+          /* display: none; */
+        }
+
+        .stay-content {
+          align-items: center;
+          justify-content: center;
+          padding: 0rem!important;
+          display: grid;
+          grid-template-columns: 100%;
+          position: absolute;
+        }
+
+        .stay-section {
+          padding: 10rem 0;
+          margin-bottom: 3rem;
+          position: relative;
+        }
+
+        @media screen and (min-width: 48rem) {
+          .two-columns {
+            grid-template-columns: 40.24390244% 48.7804878%;
+            grid-column-gap: 3.97560976%;
+          }
+
+          .two-columns>:last-child {
+            margin: 0;
+          }
+
+          .stay-section {
+              padding: 6rem 0;
+              margin-bottom: 0;
+              min-height: 600px;
+          }
+        }
+
+        .column-second {
+          padding-top: 5rem;
+        }
+
+        .stay-h1 {
+          font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          font-weight: 700;
+          line-height: 1.1875;
+          letter-spacing: -.3px;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          margin-top: 0;
+        }
+
+        .stay-p {
+          font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          font-weight: 400;
+          line-height: 1.44444444;
+          letter-spacing: -.2px;
+          font-size: 1.125rem;
+          margin-bottom: 1rem;
+        }
+
+        @media screen and (min-width: 64rem) {
+          .two-columns {
+            grid-column-gap: 5.97560976%;
+            grid-template-columns: 48.7804878% 40.24390244%;
+          }
+
+          .column-second {
+            padding: 5rem 1rem;
+            padding-right: 10%;
+          }
+
+          .stay-h1 {
+            font-size: 2rem;
+          }
+
+          .stay-p {
+            font-size: 1.125rem;
+          }
+        }
+
+        .more-div {
+          content: '';
+          width: 25px;
+          height: 14px;
+          position: absolute;
+          bottom: 13px;
+          right: 15px;
+          background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2025%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20stroke%3D%22%231264A3%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M1.548%207h21.904%22%2F%3E%3Cpath%20stroke-linejoin%3D%22round%22%20d%3D%22M17%201l7%206-7%206%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+        }
+
+        .grid.last {
+          grid-template-columns: repeat(4,1fr);
+          padding-top: 1%;
+          display: grid;
+          grid-gap: 1rem 2.43902439%;
+          justify-content: center;
+          margin-bottom: 1rem;
+          list-style-type: none;
+          width: 70%;
+          margin-left: 15%;
+        }
+
+        @media screen and (max-width: 64rem) {
+          .grid.last {
+            grid-template-columns: repeat(2,2fr);
+            padding-top: 1%;
+            display: grid;
+            grid-gap: 1rem 2.43902439%;
+            justify-content: center;
+            margin-bottom: 1rem;
+            list-style-type: none;
+            width: 70%;
+            margin-left: 15%;
+          }
+ 
+        }
+
+        @media screen and (max-width: 767px) {
+          .grid.last {
+            grid-template-columns: repeat(1,1fr);
+          }
+          .news.flush .news__media img { position: relative}
+          .news_sub_heading {
+            text-align: left;
+            justify-content: center;
+          }
+          .swiper__media {
+            margin: 0 0 1rem;
+          }
+
+          .item1, .item2, .item3, .item4 {
+            display: none;
+          }
+
+          .swiper-slide.item1 {
+            width: 50%;
+          }
+
+          .section.one.last {
+            margin-top: 7%; 
+          }
+
+          .section_header.another {
+              margin-top: 10%;
+              margin-left: -25%;
+              width: 150%;
+          }
+          
+          .section--feature__headline.u-margin-bottom--medium.text--center {
+              width: 150%;
+              margin-left: -25%;
+              font-size: 1.6rem;
+              margin-top: -44%;
+          }
+
+          .news__subheading {
+              text-align: left;
+          }
+
+          .news.flush {
+              text-decoration: none;
+              width: fit-content;
+          }
+
+          .news {
+              transition: transform 420ms cubic-bezier(.165,.84,.44,1);
+          }
+        }
+        
+        @media screen and (min-width: 48rem) {
+          .grid.last {
+            padding-top: 1.5rem;
+          }
+          .swiper-section {
+              display: none;
+          }
+
+          .swiper-container {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .swiper-container {
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        @media screen and (min-width: 25rem) {
+          .stay-p {
+            font-size: calc(1.125rem + (0 * (100vw - 400px)/ 624));
+          }
+
+          .stay-h1 {
+            font-size: calc(1.5rem + (8 * (100vw - 400px)/ 624));
+          }
+        }
+
+        .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-transition-property: -webkit-transform;
+            -moz-transition-property: -moz-transform;
+            -o-transition-property: -o-transform;
+            -ms-transition-property: -ms-transform;
+            transition-property: transform;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+        .swiper-container {
+          width: 100%;
+          height: 100%;
+        }
+        .swiper-slide {
+          text-align: center;
+          font-size: 32px;
+          background: #fff;
+          min-height: 250px;
+          cursor: grab;
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+        
+        .swiper-pagination-bullet {
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          line-height: 20px;
+          font-size: 12px;
+          color: #000;
+          opacity: 1;
+          background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .swiper-pagination {
+          position: relative;
+          margin-top: 3rem;
+        }
+
+        .swiper-pagination-bullet {
+          width: 13px;
+          height: 13px;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: #611f69;
+          width: 13px;
+          height: 13px;
+        }
+
+        .swiper-section {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 5px;
+        }
+
+        .news-headline {
+          text-align: center!important;
+          margin-bottom: 1rem!important;
+        }
+
+        .news-headline {
+          font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+          font-weight: 700;
+          line-height: 1.1875;
+          letter-spacing: -.3px;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          margin-top: 0;
+      }
+
+      @media screen and (min-width: 64rem) {
+        .news-headline {
+          font-size: 2rem;
+        }
+      }
+
+      .news.flush .news__media img {
+          bottom: auto;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+      }
+
+      .news.flush .news__media img {
+          height: auto;
+          width: 100%;
+          top: auto;
+          bottom: 0;
+          transform: translate(-50%,0);
+      }
+
+      .news__media img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: .75rem;
+    }
+
+    .news__link {
+        font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+        font-weight: 700;
+        line-height: 1.125;
+        letter-spacing: .8px;
+        font-size: .875rem;
+        text-transform: uppercase;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        padding-left: .75rem;
+        padding-right: .75rem;
+        height: 3rem;
+        position: relative;
+        white-space: normal;
+        position: absolute;
+        bottom: 0;
+        width: 95%;
+    }
+
+    .news__heading {
+        font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+        font-weight: 700;
+        letter-spacing: normal;
+        font-size: 1.25rem;
+        font-size: 1.4rem;
+        color: #1d1d1d;
+        margin: .5rem 0 1rem;
+        line-height: 30px;
+    }
+
+    .news__subheading {
+        font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+        line-height: 1.3;
+        letter-spacing: .1px;
+        font-weight: 400;
+        font-size: .875rem;
+        color: #454545;
+        margin: 8px 0 0;
+        display: inline-block;
+        padding: 0 .75rem;
+    }
+
+    /* .news {
+      box-shadow: 0 0 2rem rgba(0,0,0,.1);
+    } */
+
+    @media screen and (min-width:48rem) {
+      .news.flush .news__media img { height: 100%;max-width: none; width: auto; position: relative}
+
+      .item1, .item2, .item3, .item4 {
+        box-shadow: 0 0 2rem rgba(0,0,0,.1);
+        width: fit-content;
+      }
+
+      .news {
+        box-shadow: 0 0 2rem rgba(0,0,0,.1);
+      }
+    }
+
+    @media screen and (min-width: 64rem) {
+      .news__media {
+          height: 13rem;
+          overflow: hidden;
+          width: 100%;
+          position: relative;
+      }
+    }
+
+    .item1, .item2, .item3, .item4 {
+        width: fit-content;
+    }
+
+    .item1:hover, .item2:hover, .item3:hover, .item4:hover {
+        transform: scale(1.05);
+        text-decoration: none;
+    }
+
+    .bottom--content {
+        padding-bottom: 1.5rem!important;
+        padding-top: 20rem;
+    }
+
+    .news_link_div {
+      padding-top: 30%;
+    }
+
+    .news.flush:after {
+      content: '';
+      width: 25px;
+      height: 14px;
+      position: absolute;
+      bottom: 13px;
+      right: 15px;
+      background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2025%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20stroke%3D%22%231264A3%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M1.548%207h21.904%22%2F%3E%3Cpath%20stroke-linejoin%3D%22round%22%20d%3D%22M17%201l7%206-7%206%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 0) {
+      content-container {
+        padding: 0 4vw;
+      }
+    }
+
+    .news__heading {
+      max-width: 100%;
+      padding-left: 3%;
+    }
     </style>
 
 </head>
 
 <body>
-    <!-- <section class="container">
+    <section class="container">
         <div class="section-header-text-box">
             <h2 class="secondary-headline">SLACK VS. EMAIL</h2>
             <h1 class="header-headline">An easier, more organized way to work</h1>
@@ -180,9 +849,9 @@
             <a class="btn-slack btn-primary" href="#">Try Slack</a>
             <a class="btn-slack btn-secondary" href="#">Contact Sales</a>
         </div>
-    </section> -->
+    </section>
 
-    <section class="container-fluid">
+    <!-- <section class="container-fluid">
         <div class="container">
             <div class="video-content-wrapper">
 
@@ -193,55 +862,334 @@
             <div class="feature-content-wrapper">
                 <div class="row">
                     <div class="grid feature-text-content">
-
+                      <h1 class="image-headline">Give projects a dedicated channel, not endless email chains</h1>
+                      <p class="image-text">In your inbox, seeing all the conversations about a single project requires sifting through many different email chains. In Slack, you’ll save time by seeing all the discussions and files about a project in one place: a channel.</p>
+                      <a href="https://slack.com/features/channels" class="link-label" data-clog-click="" data-clog-ui-element="link_slack_channels" data-qa="channels"><fontsninja-text id="fontsninja-text-245" class="fontsninja-family-27753">Learn more about channels</fontsninja-text></a>
                     </div>
                     <div class="grid feature-visual-content">
+                      <video autoplay="" loop="" muted="" playsinline="" poster="https://a.slack-edge.com/7df1c/marketing/img/slack-vs-email/video/stills/01_Slack-vs-Email.jpg"><source src="https://a.slack-edge.com/ec362/marketing/img/slack-vs-email/video/01_Slack-vs-Email.mp4" type="video/mp4"></video>
 
+                      <video autoplay="" loop="" muted="" playsinline="" poster="https://a.slack-edge.com/71d96/marketing/img/slack-vs-email/video/stills/endless-chains@2x.jpg"><source src="https://a.slack-edge.com/30239/marketing/img/slack-vs-email/video/LP_01_600x420.mp4" type="video/mp4"></video>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    
-<!-- 
-    <section class="container-fluid">
-        <div class="section-footer-text-box">
-            <h3 class="bottom-headline">Meet the alternative to email</h3>
-            <a class="btn-slack btn-bottom-primary" href="#">Try Slack</a>
-            <a class="btn-slack btn-bottom-secondary" href="#">Contact Sales</a>
-        </div>
     </section> -->
 
-
-    <section class="container">
-        <div class="quote-content">
-            <div>
-                <img src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/lyft-logo.png" srcset="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/lyft-logo.png 1x, https://a.slack-edge.com/80588/marketing/img/logos/company/_color/lyft-logo@2x.png 2x" alt="Lyft logo">
-            </div>
-            <p>"You can't have a good conversation over email-it's not quick enough. Coming together in Slack channels allows us to easily discuss day-to-day management topics. That's invaluable</p>
-            <div>
-                <p>Benjamin Sternsmith</p>
-                <p>Area Vice President of Sales, Lyft Business</p>
-                <a>Read Story</a>
-            </div>
+    <section class="container-fluid first-content">
+      <div class="container">
+        <div class="video-content-wrapper">
+          <video class="youtube-video" autoplay="" loop="" muted="" playsinline="" poster="https://a.slack-edge.com/73cc1e/marketing/img/slack-vs-email/slack-vs-email-youtube-frame@2x.png"></video>
         </div>
+      </div>
+      <div class="row justify-content-center image-content">
+        <div class="col-4 one mr-5">
+          <div class="grid feature-text-content">
+            <h1 class="image-headline">Give projects a dedicated channel, not endless email chains</h1>
+            <p class="image-text">In your inbox, seeing all the conversations about a single project requires sifting through many different email chains. In Slack, you’ll save time by seeing all the discussions and files about a project in one place: a channel.</p>
+            <a href="https://slack.com/features/channels" class="link-label extra" data-clog-click="" data-clog-ui-element="link_slack_channels" data-qa="channels"><fontsninja-text id="fontsninja-text-245" class="fontsninja-family-27753">Learn more about channels</fontsninja-text></a>
+            <video autoplay="" loop="" muted="" playsinline="" class="extra-video" poster="https://a.slack-edge.com/7df1c/marketing/img/slack-vs-email/video/stills/01_Slack-vs-Email.jpg"><source src="https://a.slack-edge.com/ec362/marketing/img/slack-vs-email/video/01_Slack-vs-Email.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+        <div class="col-4 two mr-5">
+          <video autoplay="" loop="" muted="" playsinline="" poster="https://a.slack-edge.com/71d96/marketing/img/slack-vs-email/video/stills/endless-chains@2x.jpg"><source src="https://a.slack-edge.com/30239/marketing/img/slack-vs-email/video/LP_01_600x420.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <section class="container">
+      <div class="d-flex justify-content-center">
+        <div class="quote-content lyft">
+            <div class="quote-image"><img src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/lyft-logo.png" srcset="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/lyft-logo.png 1x, https://a.slack-edge.com/80588/marketing/img/logos/company/_color/lyft-logo@2x.png 2x" alt="Lyft logo"></div>
+            <p class="quote-text">"You can't have a good conversation over email-it's not quick enough. Coming together in Slack channels allows us to easily discuss day-to-day management topics. That's invaluable</p>
+            <div><p class="quote-name">Benjamin Sternsmith</p><p class="quote-job">Area Vice President of Sales, Lyft Business</p><a href="https://slack.com/customer-stories/lyft" data-clog-click="" data-clog-ui-element="link_customer_story" data-clog-params="trigger=lyft" class="link-label extra"><span><fontsninja-text id="fontsninja-text-264" class="fontsninja-family-27753">Read story</fontsninja-text></span></a></div>
+        </div>
+      </div>
     </section>
 
     <section class="container">
-        <div class="quote-content">
-            <div>
-                <img src="https://a.slack-edge.com/c6d68/marketing/img/stories/cole-haan/cole-haan-logo.jpg" srcset="https://a.slack-edge.com/c6d68/marketing/img/stories/cole-haan/cole-haan-logo.jpg 1x, https://a.slack-edge.com/c6d68/marketing/img/stories/cole-haan/cole-haan-logo@2x.jpg 2x" alt="Cole Haan logo">
-            </div>
-            <p>“I can drop into any channel and see what’s happening. I don’t have to interrupt anyone or call a meeting to get updated. It’s all happening in real time, which means we’re all just that much more efficient.”</p>
-            <div>
-                <p>David Maddocks</p>
-                <p>CMO, Cole Haan</p>
-                <a>Read Story</a>
-            </div>
+      <div class="row justify-content-center image-content zoe-content">
+        <div class="col">
+          <div class="grid feature-text-content with-image">
+            <h1 class="image-headline">Reach people faster</h1>
+            <p class="image-text">Slack gives you access to real-time conversations with any teammate or team. Unlike email, where every new message is weighted alike, it’s easy to grab a specific someone's attention with a notification when you need a quick response.</p>
+          </div>
         </div>
+        <div class="col">
+          <video autoplay="" loop="" muted="" playsinline="" poster="https://a.slack-edge.com/71d96/marketing/img/slack-vs-email/video/stills/reach-people-faster@2x.jpg"><source src="https://a.slack-edge.com/30239/marketing/img/slack-vs-email/video/LP_02_600x420.mp4" type="video/mp4"></video>
+          <video id="zoe_video" autoplay="" loop="" muted="" playsinline="" poster="https://a.slack-edge.com/7df1c/marketing/img/slack-vs-email/video/stills/02_Slack-vs-Email.jpg"><source src="https://a.slack-edge.com/ec362/marketing/img/slack-vs-email/video/02_Slack-vs-Email.mp4" type="video/mp4"></video>
+        </div>
+      </div>
     </section>
 
+    <section class="container stay-section">
+      <div class="stay-content two-columns centered">
+          <div></div>
+          <div class="column-second">
+            <h1 class="stay-h1">Stay looped in, not out</h1>
+            <p class="stay-p">Email isolates information — you can only see the conversations you’ve been included on. Everyone in a channel sees the same messages, so your team knows who’s responsible for what and how to move work forward.</p>
+        </div>
+      </div>
+      <div></div>
+      <video autoplay="" loop="" muted="" playsinline="" class="background-video" poster="https://a.slack-edge.com/e614b/marketing/img/slack-vs-email/video/stills/stay-looped-in.jpg"><source src="https://a.slack-edge.com/30239/marketing/img/slack-vs-email/video/LP_03_1230x600.mp4" type="video/mp4"></video>
+    </section>
+
+    <section class="container">
+      <div class="d-flex justify-content-center">
+        <div class="quote-content colehaan">
+            <div class="quote-image"><img src="https://a.slack-edge.com/c6d68/marketing/img/stories/cole-haan/cole-haan-logo.jpg" srcset="https://a.slack-edge.com/c6d68/marketing/img/stories/cole-haan/cole-haan-logo.jpg 1x, https://a.slack-edge.com/c6d68/marketing/img/stories/cole-haan/cole-haan-logo@2x.jpg 2x" alt="Cole Haan logo">
+            </div><p class="quote-text">“I can drop into any channel and see what’s happening. I don’t have to interrupt anyone or call a meeting to get updated. It’s all happening in real time, which means we’re all just that much more efficient.”</p>
+            <div><p class="quote-name">David Maddocks</p><p class="quote-job">CMO, Cole Haan</p><a href="https://slack.com/customer-stories/lyft" data-clog-click="" data-clog-ui-element="link_customer_story" data-clog-params="trigger=lyft" class="link-label extra"><span><fontsninja-text id="fontsninja-text-264" class="fontsninja-family-27753">Read story</fontsninja-text></span></a></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container-fluid second-content">
+      <div class="row justify-content-center image-content">
+        <div class="col-4 one mr-5">
+          <div class="grid feature-text-content">
+            <h1 class="image-headline">Spend less time switching context</h1>
+            <p class="image-text">Email has limited functionality with other apps — you need to constantly switch tabs, windows, and your focus for even the smallest of tasks. Slack connects with all of your work tools, so you can find information or perform quick actions without leaving conversations.</p>
+            <a href="https://slack.com/features/channels" class="link-label extra" data-clog-click="" data-clog-ui-element="link_slack_channels" data-qa="channels"><fontsninja-text id="fontsninja-text-245" class="fontsninja-family-27753">See the Slack App Directory</fontsninja-text></a>
+            <video autoplay="" loop="" muted="" playsinline="" class="extra-video" poster="https://a.slack-edge.com/7df1c/marketing/img/slack-vs-email/video/stills/03_Slack-vs-Email.jpg"><source src="https://a.slack-edge.com/ec362/marketing/img/slack-vs-email/video/03_Slack-vs-Email.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+        <div class="col-4 two mr-5">
+          <video autoplay="" loop="" muted="" playsinline="" poster="https://a.slack-edge.com/71d96/marketing/img/slack-vs-email/video/stills/switching-context@2x.jpg"><source src="https://a.slack-edge.com/30239/marketing/img/slack-vs-email/video/LP_04_600x420.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section>
+      <div class="container">
+        <div class="grid row justify-content-center last">
+            <div class="col-sm-2">
+              <div>
+                <figure class="more-media">
+                  <img src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo.jpg" srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo@2x.jpg 2x" alt="">
+                </figure>
+                <header>
+                  <span>Training</span>
+                  <h2>Top 5 tips for getting started in Slack</h2>
+                </header>
+                <div class="more-div">
+                  <span>Learn more</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div>
+                <figure class="more-media">
+                  <img src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar.jpg" srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar@2x.jpg 2x" alt="">
+                </figure>
+                  <header>
+                  <span>Webinar</span>
+                  <h2>How to Launch Slack at your Organization</h2>
+                </header>
+                <div class="more-div">
+                  <span>Learn more</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div>
+                <figure class="more-media">
+                  <img src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips.jpg" srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips@2x.jpg 2x" alt="">
+                </figure>
+                <header>
+                  <span>Training</span>
+                  <h2>Top 5 tips for getting started in Slack</h2>
+                </header>
+                <div class="more-div">
+                  <span>Learn more</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div>
+                <figure class="more-media">
+                  <img src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar.jpg" srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar@2x.jpg 2x" alt="">
+                </figure>
+                <header>
+                  <span>Training</span>
+                  <h2>Top 5 tips for getting started in Slack</h2>
+                </header>
+                <div class="more-div">
+                  <span>Learn more</span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section borderless">
+      <div class="content-container news-container bottom-content">
+          <h2 class="news-headline">Learn more about how work happens in Slack</h2>
+          <div class="grid last">
+              <div class="col item1">
+                  <a
+                      target="_blank"
+                      href="https://slack.com/resources/using-slack/slack-tutorials?utm_source=slack-vs-email&amp;utm_campaign=general%20promotion"
+                      rel="noopener" data-clog-click data-clog-ui-element="link_promo_cta"
+                      data-clog-ui-step="page_slack_vs_email" data-clog-ui-component="inc_promo"
+                      data-clog-params="trigger=resources/using-slack/slack-tutorials"
+                      class="news flush">
+                      <figure class="news__media"><img
+                              src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo.jpg"
+                              srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo@2x.jpg 2x"
+                              alt=""></figure>
+                      <header class="new_sub_heading"><span class="news__subheading">Training</span>
+                          <h3 class="news__heading">Top 5 tips for getting started in Slack</h3>
+                      </header>
+                      <div class="news_link_div"><span class="news__link"><span>Learn More</span></span></div>
+                  </a>
+              </div>
+          <div class="col item2">
+              <a target="_blank"
+                  href="https://slack.com/events/webinars/how-to-launch-slack-at-your-organization?utm_source=slack-vs-email&amp;utm_campaign=general%20promotion"
+                  rel="noopener" data-clog-click data-clog-ui-element="link_promo_cta"
+                  data-clog-ui-step="page_slack_vs_email" data-clog-ui-component="inc_promo"
+                  data-clog-params="trigger=/events/webinars/how-to-launch-slack-at-your-organization"
+                  class="news flush">
+                  <figure class="news__media"><img
+                          src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar.jpg"
+                          srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar@2x.jpg 2x"
+                          alt=""></figure>
+                          <header class="new_sub_heading"><span class="news__subheading">Webinar</span>
+                            <h3 class="news__heading">How to Launch Slack at your Organization</h3>
+                  </header>
+                  <div class="news_link_div"><span class="news__link"><span>Watch</span></span></div>
+              </a>
+          </div>
+          <div class="col item3">
+              <a target="_blank"
+                  href="https://slack.com/slack-tips?utm_source=hppromo&amp;utm_campaign=general%20promotion"
+                  rel="noopener" data-clog-click data-clog-ui-element="link_promo_cta"
+                  data-clog-ui-step="page_slack_vs_email" data-clog-ui-component="inc_promo"
+                  data-clog-params="trigger=slack-tips" class="news flush">
+                  <figure class="news__media"><img
+                          src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips.jpg"
+                          srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips@2x.jpg 2x"
+                          alt=""></figure>
+                          <header class="new_sub_heading"><span class="news__subheading">Tip</span>
+                    <h3 class="news__heading">Learn how to make work simpler with Slack Tips</h3>
+                  </header>
+                  <div class="news_link_div"><span class="news__link"><span>Get started</span></span></div>
+              </a>
+          </div>  
+          <div class="col item4">
+              <a target="_blank"
+                  href="https://slack.com/events/webinars/working-in-slack-2?utm_source=hppromo&amp;utm_campaign=general%20promotion"
+                  rel="noopener" data-clog-click data-clog-ui-element="link_promo_cta"
+                  data-clog-ui-step="page_slack_vs_email" data-clog-ui-component="inc_promo"
+                  data-clog-params="trigger=/events/webinars/working-in-slack-2"
+                  class="news flush">
+                  <figure class="news__media"><img
+                          src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar.jpg"
+                          srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar@2x.jpg 2x"
+                          alt=""></figure>
+                          <header class="new_sub_heading"><span class="news__subheading">Webinar</span>
+                    <h3 class="news__heading">Working in Slack: Getting Started</h3>
+                  </header>
+                  <div class="news_link_div"><span class="news__link"><span>Watch</span></span></div>
+              </a>
+          </div>
+  </section>
+  <!------------------ SWIPER STARTS -------------------------->
+  <section class="swiper-section">
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide item1">
+          <a
+            target="_blank"
+            href="https://slack.com/resources/using-slack/slack-tutorials?utm_source=slack-vs-email&amp;utm_campaign=general%20promotion"
+            rel="noopener" data-clog-click data-clog-ui-element="link_promo_cta"
+            data-clog-ui-step="page_slack_vs_email" data-clog-ui-component="inc_promo"
+            data-clog-params="trigger=resources/using-slack/slack-tutorials"
+            class="news flush">
+            <figure class="news__media"><img
+                    src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo.jpg"
+                    srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/top-5-tips-promo@2x.jpg 2x"
+                    alt=""></figure>
+            <header class="news_sub_heading"><span class="news__subheading">Training</span>
+                <h3 class="news__heading">Top 5 tips for getting started in Slack</h3>
+            </header>
+            <div class="news_link_div"><span class="news__link"><span>Learn More</span></span></div>
+        </a>
+      </div>
+
+        <div class="swiper-slide item2">
+            <a target="_blank"
+            href="https://slack.com/events/webinars/how-to-launch-slack-at-your-organization?utm_source=slack-vs-email&amp;utm_campaign=general%20promotion"
+            rel="noopener" data-clog-click data-clog-ui-element="link_promo_cta"
+            data-clog-ui-step="page_slack_vs_email" data-clog-ui-component="inc_promo"
+            data-clog-params="trigger=/events/webinars/how-to-launch-slack-at-your-organization"
+            class="news flush">
+            <figure class="news__media"><img
+                    src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar.jpg"
+                    srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/launch-slack-webinar@2x.jpg 2x"
+                    alt=""></figure>
+                    <header class="news_sub_heading"><span class="news__subheading">Webinar</span>
+                      <h3 class="news__heading">How to Launch Slack at your Organization</h3>
+            </header>
+            <div class="news_link_div"><span class="news__link"><span>Watch</span></span></div>
+          </a>
+        </div>
+        <div class="swiper-slide item3">
+            <a target="_blank"
+            href="https://slack.com/slack-tips?utm_source=hppromo&amp;utm_campaign=general%20promotion"
+            rel="noopener" data-clog-click data-clog-ui-element="link_promo_cta"
+            data-clog-ui-step="page_slack_vs_email" data-clog-ui-component="inc_promo"
+            data-clog-params="trigger=slack-tips" class="news flush">
+            <figure class="news__media"><img
+                    src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips.jpg"
+                    srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/slack-tips@2x.jpg 2x"
+                    alt=""></figure>
+                    <header class="news_sub_heading"><span class="news__subheading">Tip</span>
+              <h3 class="news__heading">Learn how to make work simpler with Slack Tips</h3>
+            </header>
+            <div class="news_link_div"><span class="news__link"><span>Get started</span></span></div>
+          </a>
+        </div>
+        <div class="swiper-slide item4">
+          <a target="_blank"
+          href="https://slack.com/events/webinars/working-in-slack-2?utm_source=hppromo&amp;utm_campaign=general%20promotion"
+          rel="noopener" data-clog-click data-clog-ui-element="link_promo_cta"
+          data-clog-ui-step="page_slack_vs_email" data-clog-ui-component="inc_promo"
+          data-clog-params="trigger=/events/webinars/working-in-slack-2"
+          class="news flush">
+          <figure class="news__media"><img
+                  src="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar.jpg"
+                  srcset="https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar.jpg 1x, https://a.slack-edge.com/93c28/marketing/img/slack-vs-email/get-started-slack-webinar@2x.jpg 2x"
+                  alt=""></figure>
+                  <header class="news_sub_heading"><span class="news__subheading">Webinar</span>
+            <h3 class="news__heading">Working in Slack: Getting Started</h3>
+          </header>
+          <div class="news_link_div"><span class="news__link"><span>Watch</span></span></div>
+        </a>
+        </div>
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination">
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+      </div>
+    </div>
+  </section>
+  <!------------------ SWIPER ENDS -------------------------->
+    <section class="container-fluid">
+        <div class="section-header-text-box section-footer-text-box">
+            <h3 class="bottom-headline">Meet the alternative to email</h3>
+            <a class="btn-slack bottom btn-bottom-primary" href="#">Try Slack</a>
+            <a class="btn-slack bottom btn-bottom-secondary" href="#">Contact Sales</a>
+        </div>
+    </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -252,6 +1200,17 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+        // If we need pagination
+        pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        })
     </script>
 </body>
 
