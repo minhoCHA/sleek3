@@ -164,7 +164,7 @@
         }
 
         .section-header-text-box {
-            padding: 50px 15px;
+            padding: 100px 15px;
             text-align: center;
             margin-bottom: 10%;
         }
@@ -175,12 +175,9 @@
             height: 370px;
             background-color: #4a154b;
             color: #fff;
-            padding: 0 auto;
-            padding-top: 10%;
-            margin: 0 auto;
-            margin-top: 10%;
+            /* margin: 0 auto;
+            margin-top: 10%; */
         }
-
         .bottom-headline {
             font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
             font-weight: 700;
@@ -507,7 +504,7 @@
 
         @media screen and (min-width: 64rem) {
           .two-columns {
-            grid-column-gap: 5.97560976%;
+            grid-column-gap: 1.97560976%;
             grid-template-columns: 48.7804878% 40.24390244%;
           }
 
@@ -539,11 +536,11 @@
           grid-template-columns: repeat(4,1fr);
           padding-top: 1%;
           display: grid;
-          grid-gap: 1rem 2.43902439%;
+          grid-gap: 0rem 0;
           justify-content: center;
           margin-bottom: 1rem;
           list-style-type: none;
-          width: 70%;
+          width: 80%;
           margin-left: 15%;
         }
 
@@ -556,7 +553,7 @@
             justify-content: center;
             margin-bottom: 1rem;
             list-style-type: none;
-            width: 70%;
+            width: 80%;
             margin-left: 15%;
           }
  
@@ -847,7 +844,7 @@
     }
 
     .item1, .item2, .item3, .item4 {
-        width: fit-content;
+        width: inherit;
     }
 
     .item1:hover, .item2:hover, .item3:hover, .item4:hover {
@@ -1098,6 +1095,79 @@
     .u-rect-primary-hover rect {
         fill: #611f69!important;
     }
+
+    .padding-top {
+      padding-top: 5rem!important;
+    }
+
+    .padding-bottom {
+      padding-bottom: 5rem!important;
+    }
+
+    .bs-example{
+      height: 500%;
+      padding-top: 50%;
+    }
+    .modal-content iframe{
+        margin: 0 auto;
+        display: block;
+    }
+
+    #myModal {
+      margin-top: 5%;
+    }
+
+    @media screen and (max-width:48rem){
+      #myModal {
+      }
+    }
+
+    @media screen and (max-width:64rem){
+      #myModal {
+      }
+    }
+
+    .close_div {
+        outline: 0;
+    }
+
+    .close.button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        width: 60px;
+        height: 60px;
+        opacity: .6;
+        z-index: 1;
+        border-radius: 30px;
+        cursor: pointer;
+        font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+        font-weight: 400;
+        line-height: 1.28571429;
+        letter-spacing: normal;
+        font-size: .875rem;
+        margin-bottom: 1rem;
+        margin-top: -1rem;
+    }
+
+    .close_div {
+      background-color: #000;
+    }
+    .modal-dialog {
+      margin-top: 5%;
+    }
+    .modal_p {
+      font-size: 0.8rem;
+    }
+    @media (min-width: 576px) {
+      .modal-dialog {
+        max-width: 1000px;
+        margin: 1.75rem auto;
+      }
+    }
     </style>
 
 </head>
@@ -1116,9 +1186,11 @@
       <div class="container">
         <div class="container">
           <div class="video-content-wrapper">
-            <a class="v--top v--flush c-youtube-video--showcase__link u-rect-primary-hover" data-clog-click="" data-clog-params="trigger=sprDCCFUd4A" data-clog-ui-element="link_slack_vs_email_video" data-clog-ui-component="inc_fs_youtube_player" data-yt-hash="choose-a-better-way-to-work" data-yt="sprDCCFUd4A" href="https://www.youtube.com/embed/sprDCCFUd4A"><span class="u-visually-hidden">Watch video</span><svg xmlns="http://www.w3.org/2000/svg" height="60" width="84" aria-hidden="true" class="c-youtube-video--showcase__icon svg-replaced" shape-rendering="geometricPrecision">
+            <a href="#myModal" data-toggle="modal" class="v--top v--flush c-youtube-video--showcase__link u-rect-primary-hover" 0ata-clog-click="" data-clog-params="trigger=sprDCCFUd4A" data-clog-ui-element="link_slack_vs_email_video" data-clog-ui-component="inc_fs_youtube_player" data-yt-hash="choose-a-better-way-to-work" data-yt="sprDCCFUd4A"><span class="u-visually-hidden">Watch video</span><svg xmlns="http://www.w3.org/2000/svg" height="60" width="84" aria-hidden="true" class="c-youtube-video--showcase__icon svg-replaced" shape-rendering="geometricPrecision">
               <g fill="none" transform="translate(0 .564)"><rect height="59" rx="4" width="84"></rect><path d="M49 29.95L35 36.9V23L49 29.95Z" fill="#fff"></path></g></svg><video class="youtube-video" autoplay="" loop="" muted="" playsinline="" poster="https://a.slack-edge.com/73cc1e/marketing/img/slack-vs-email/slack-vs-email-youtube-frame@2x.png"></video></a>
           </div>
+          
+          <!-- <button class="c-yt-player__close" data-no-clog="" aria-label="Close YouTube player"><svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="-255 347 100 100" aria-hidden="true"><path d="M-160.4 434.2l-37.2-37.2 37.1-37.1-7-7-37.1 37.1-37.1-37.1-7 7 37.1 37.1-37.2 37.2 7.1 7 37.1-37.2 37.2 37.2"></path></svg>esc</button> -->
         </div>
         <div class="row main">
           <div class="col-lg-6 col-sm-offset-1 custom mr-auto">
@@ -1360,13 +1432,33 @@
     </div>
   </section>
   <!------------------ SWIPER ENDS -------------------------->
-    <section class="container-fluid">
+    <section class="container-fluid padding-top padding-bottom vertical-center">
         <div class="section-header-text-box section-footer-text-box">
             <h3 class="bottom-headline">Meet the alternative to email</h3>
             <a class="btn-slack bottom btn-bottom-primary" href="#">Try Slack</a>
             <a class="btn-slack bottom btn-bottom-secondary" href="#">Contact Sales</a>
         </div>
     </section>
+
+
+    <div class="bs-example">
+      <!-- Button HTML (to Trigger Modal) -->
+      <!-- Modal HTML -->
+      <div id="myModal" class="modal fade">
+        <div class="close_div">
+        <button type="button" class="close button" data-dismiss="modal">
+          <p class="modal_p first">x</p>
+          <p class="modal_p">ESC</p>
+        </button></div>
+        <div class="modal-dialog">
+              <div class="modal-content embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" id="cartoonVideo" src="https://www.youtube.com/embed/sprDCCFUd4A?autoplay=1&amp;modestbranding=1&amp;showinfo=0" width="1000" height="700" frameborder="0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+  </div>     
+
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -1388,6 +1480,34 @@
                 clickable: true,
             },
         })
+
+            /* Get iframe src attribute value i.e. YouTube video url
+            and store it in a variable */
+            var url = $("#cartoonVideo").attr('src');
+            
+            /* Assign empty url value to the iframe src attribute when
+            modal hide, which stop the video playing */
+            $(".c-youtube-video--showcase__link").on('hide.bs.modal', function(){
+                $("#cartoonVideo").attr('src', '');
+            });
+
+            // when the modal is opened autoplay it  
+            $('#myModal').on('shown.bs.modal', function (e) {
+                
+            // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+              $("#cartoonVideo").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+            })
+            
+            /* Assign the initially stored url back to the iframe src
+            attribute when modal is displayed again */
+            $("#myModal").on('show.bs.modal', function(){
+                $("#cartoonVideo").attr('src', url);
+            });
+
+            $('#myModal').on('hide', function () {
+              $('#cartoonVideo').html('');  
+            });
+
     </script>
 </body>
 
